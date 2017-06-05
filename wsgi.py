@@ -1,10 +1,10 @@
 from flask import Flask,Response
 import requests
 
-app = Flask(__name__)
+application = Flask(__name__)
 default_name = 'Joe Bloggs'
 
-@app.route('/')
+@application.route('/')
 def get_identicon():
     name    = default_name
     header  = '<html><head><title>Identidock</title></head><body>'
@@ -21,4 +21,4 @@ def get_identicon():
 
 
 if __name__ == '__main__':
-    app.run()
+    application.run()
